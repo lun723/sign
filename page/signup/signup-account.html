@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signin</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../../CSS/sign-in.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body class="container">
+        <main class="form-signin">
+            <form id="form">
+                <h3 class="title">會員註冊</h3>
+                <h3 class="title">建立帳號</h3>
+                <div class="custom-input-group">
+                    <div class="input-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <input type="text" class="custom-input" name="phoneNumber" placeholder="請輸入手機號碼" required/>
+                    <div class="toggle-text" onclick="sendVerificationCode()">
+                        寄送驗證碼
+                    </div>
+                </div>
+                <div class="text-muted">※請輸入有效的手機號碼，以利進行簡訊驗證碼接收</div>
+                <div class="custom-input-group">
+                    <div class="input-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <input type="text" class="custom-input" id="verification" name="verification" placeholder="請輸入驗證碼" required/>
+                </div>
+                <div class="form-btn">
+                    <button class="btn btn-danger" type="submit" onclick="verifyPhone('./signup-password.html')">下一步</button>
+                </div>
+            </form>
+        </main>
+        <script src="../../sign-in.js"></script>
+    </body>
+</html>
